@@ -1,0 +1,28 @@
+﻿GET http://localhost:5000/api/commands
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T035154.200.json
+
+###
+
+GET http://localhost:5000/api/commands
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-10-12T035131.200.json
+
+###
+
+GET http://localhost:5000/api/commands
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000
+Accept: */*
+Cache-Control: no-cache
+
+###
+
