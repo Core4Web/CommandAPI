@@ -6,6 +6,7 @@ using CommandAPI.Controllers.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,15 @@ namespace CommandAPI
         
         public void ConfigureServices(IServiceCollection services)
         {
+            /*
+            var builder = new SqlConnectionStringBuilder();
+            builder.ConnectionString = Configuration.GetConnectionString("MSSqlConnection");
+            builder.UserID = Configuration["UserID"];
+            builder.Password = Configuration["Password"];
+            services.AddDbContext<CommandContext>(opt =>
+                opt.UseSqlServer(builder.ConnectionString));
+                */
+
             services.AddDbContext<CommandContext>(opt =>
                 opt.UseSqlServer(Configuration.GetConnectionString("MSSqlConnection")));
             services.AddControllers();
